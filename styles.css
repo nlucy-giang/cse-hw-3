@@ -444,7 +444,7 @@ footer {
   flex-direction: column;
   font-family: Rubik;
   font-size:10px;
-  height: 100vh;
+  height: 100dvh;
   margin: 0;
 }
 

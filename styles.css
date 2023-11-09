@@ -200,6 +200,9 @@ span:hover {
           padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
           font-size: 0.85rem; /* Reduce font size */
     }
+    .about-button {
+      padding-bottom: 3%;
+    }
 }
 
 @media only screen and (max-width: 440px) {

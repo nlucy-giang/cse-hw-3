@@ -593,7 +593,7 @@ form p {
   }
 }
 
-a[href^="tel"] {
+#contact a[href^="tel"] {
   text-decoration: none; /* Remove underline */
-  color: white; /* Set the color to inherit from its parent */
+  color: black; /* Set the color to inherit from its parent */
 }

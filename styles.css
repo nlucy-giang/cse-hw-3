@@ -202,6 +202,12 @@ span:hover {
     }
 }
 
+@media only screen and (max-width: 440px) {
+  #bio-content {
+    margin-right: 12%;
+  }
+}
+
 #skills {
     color: #2D2D33;
 }
@@ -533,6 +539,9 @@ input:focus, textarea:focus{
         /* Adjust button size for smaller screens */
         padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
         font-size: 0.85rem; /* Reduce font size */
+  }
+  .sm-view {
+    font-size: 1rem;
   }
 }
 

@@ -139,6 +139,7 @@ span:hover {
 
     #bio {
       margin-left: 30px;
+      max-width: 95%;
     }
 
     #about img {
@@ -162,7 +163,7 @@ span:hover {
 
     #bio {
       margin-left:10px;
-      margin-right: 10px;
+      max-width: 90%
     }
 
     #about img {

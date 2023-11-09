@@ -127,7 +127,7 @@ span:hover {
 }
 
 /* Responsive adjustment for smaller screens */
-@media only screen and (max-width: 736px) and (orientation: portrait) {
+@media only screen and (max-width: 736px) {
     #about table {
         display: block;
     }
@@ -147,7 +147,7 @@ span:hover {
     }
 }
 
-@media only screen and (max-width: 467px) and (orientation: portrait){
+@media only screen and (max-width: 467px) {
     #logo img {
       display: none;
     }
@@ -162,11 +162,20 @@ span:hover {
 
     #bio {
       margin-left:10px;
+      margin-right: 10px;
     }
 
     #about img {
         width: 70%; /* Allow the image to take full width on smaller screens */
         margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    #about .rounded-button {
+          /* Adjust button size for smaller screens */
+          padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
+          font-size: 0.85rem; /* Reduce font size */
     }
 }
 
@@ -244,6 +253,7 @@ span:hover {
 @media only screen and (max-width: 767px){
     #skills table {
         display: flex; /* Changes table to block display */
+        justify-content: center;
     }
     #skills table th, #skills table td {
         display: block; /* Changes cells to block display */

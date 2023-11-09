@@ -30,8 +30,10 @@
                             <tr>
                                 <td>
                                     <picture id="selfportrait">
-                                            <img src="portrait.png" alt="picture of me">
-                                    </picture>
+                                      <source media="(max-width: 767px)" srcset="portrait-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="portrait.png">
+                                      <img src="portrait.png" alt="This is a picture of me.">
+                                    </picture><br><br>
                                 </td>
                                 <td id="bio">
                                   <section class="bio-name">
@@ -41,10 +43,12 @@
                                   </section>
                                     <p id="bio-content"><font size="3">I'm a fourth year undergrad at UC San Diego and my passion is Computer Science. My interests include software design and development, UI/UX design, game development, artificial intelligence, and machine learning.</font></p>
                                       <p id="learn-more">Learn more about my:</p>
+                                      <div class="about-button">
                                       <a href="#skills"><button class="rounded-button" role="button">Skills</button></a>
                                       <a href="#projects"><button class="rounded-button" role="button">Projects</button></a>
                                       <a href="#contact"><button class="rounded-button" role="button">Contact</button></a>
                                       <a href="cv.pdf"><button class="rounded-button" role="button"> Resume</button></a>
+                                    </div>
                                     <br><br>
                                 </td>
                             </tr>
@@ -57,34 +61,64 @@
                         <table width="85%" border="0" align="center" cellpadding="15px">
                             <tr>
                                 <td>
-                                    <img src="icon.jpg" width="15%"> <br><br>
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="icon-optimized.jpg">
+                                    <source media="(min-width: 768px)" srcset="icon.jpg">
+                                    <img src="icon.jpg" alt="This is an icon representing the skill.">
+                                    <!-- image courtesy of https://integreat.ro/ -->
+                                  </picture><br><br>
                                     <h3><font size="5"> Object-Oriented Programming </font> <br></h3>
                                     <p><font size="3"> This is a description of the skill. More information about each of these skills will be written here later. </font></p>
                                 </td>
                                 <td>
-                                    <img src="icon.jpg" width="15%"> <br><br>
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="icon-optimized.jpg">
+                                    <source media="(min-width: 768px)" srcset="icon.jpg">
+                                    <img src="icon.jpg" alt="This is an icon representing the skill.">
+                                    <!-- image courtesy of https://integreat.ro/ -->
+                                  </picture><br><br>
                                     <h3><font size="5"> Web Development </font> <br></h3>
                                     <p><font size="3"> This is a description of the skill. More information about each of these skills will be written here later. </font></p>
                                 </td>
                                 <td>
-                                    <img src="icon.jpg" width="15%"> <br><br>
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="icon-optimized.jpg">
+                                    <source media="(min-width: 768px)" srcset="icon.jpg">
+                                    <img src="icon.jpg" alt="This is an icon representing the skill.">
+                                    <!-- image courtesy of https://integreat.ro/ -->
+                                  </picture><br><br>
                                     <h3><font size="5"> Java </font> <br></h3>
                                     <p><font size="3"> This is a description of the skill. More information about each of these skills will be written here later. </font></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <img src="icon.jpg" width="15%"> <br><br>
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="icon-optimized.jpg">
+                                    <source media="(min-width: 768px)" srcset="icon.jpg">
+                                    <img src="icon.jpg" alt="This is an icon representing the skill.">
+                                    <!-- image courtesy of https://integreat.ro/ -->
+                                  </picture><br><br>
                                     <h3><font size="5"> CSS </font> <br></h3>
                                     <p><font size="3"> This is a description of the skill. More information about each of these skills will be written here later. </font></p>
                                 </td>
                                 <td>
-                                    <img src="icon.jpg" width="15%"> <br><br>
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="icon-optimized.jpg">
+                                    <source media="(min-width: 768px)" srcset="icon.jpg">
+                                    <img src="icon.jpg" alt="This is an icon representing the skill.">
+                                    <!-- image courtesy of https://integreat.ro/ -->
+                                  </picture><br><br>
                                     <h3><font size="5"> HTML Development </font> <br></h3>
                                     <p><font size="3"> This is a description of the skill. More information about each of these skills will be written here later. </font></p>
                                 </td>
                                 <td>
-                                    <img src="icon.jpg" width="15%"> <br><br>
+                                  <picture>
+                                    <source media="(max-width: 767px)" srcset="icon-optimized.jpg">
+                                    <source media="(min-width: 768px)" srcset="icon.jpg">
+                                    <img src="icon.jpg" alt="This is an icon representing the skill.">
+                                    <!-- image courtesy of https://integreat.ro/ -->
+                                  </picture><br><br>
                                     <h3><font size="5"> JavaScript </font> <br></h3>
                                     <p><font size="3"> This is a description of the skill. More information about each of these skills will be written here later. </font></p>
                                 </td>
@@ -100,7 +134,12 @@
                                 <!-- First row of projects -->
                                 <td class="project-item">
                                   <a href="#project-link">
-                                    <img src="project-icon.png" alt="">
+                                    <picture>
+                                      <source media="(max-width: 767px)" srcset="project-icon-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="project-icon.jpg">
+                                      <img src="project-icon.jpg" alt="This is a preview image of my project.">
+                                      <!-- image courtesy of https://www.istockphoto.com/ -->
+                                    </picture>
                                     <div class="project-info">
                                     <h3><font size="5"> Project 1 </font></h3>
                                     <p><font size="3">This is a description of the project. More information about each of these projects will be written here later.</font></p>
@@ -109,7 +148,12 @@
                                 </td>
                                 <td class="project-item">
                                   <a href="#project-link">
-                                    <img src="project-icon.png" alt="">
+                                    <picture>
+                                      <source media="(max-width: 767px)" srcset="project-icon-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="project-icon.jpg">
+                                      <img src="project-icon.jpg" alt="This is a preview image of my project.">
+                                      <!-- image courtesy of https://www.istockphoto.com/ -->
+                                    </picture>
                                     <div class="project-info">
                                     <h3><font size="5"> Project 2 </font></h3>
                                     <p><font size="3">This is a description of the project. More information about each of these projects will be written here later.</font></p>
@@ -118,7 +162,12 @@
                                 </td>
                                 <td class="project-item">
                                   <a href="#project-link">
-                                    <img src="project-icon.png" alt="">
+                                    <picture>
+                                      <source media="(max-width: 767px)" srcset="project-icon-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="project-icon.jpg">
+                                      <img src="project-icon.jpg" alt="This is a preview image of my project.">
+                                      <!-- image courtesy of https://www.istockphoto.com/ -->
+                                    </picture>
                                     <div class="project-info">
                                     <h3><font size="5"> Project 3 </font></h3>
                                     <p><font size="3">This is a description of the project. More information about each of these projects will be written here later.</font></p>
@@ -130,7 +179,12 @@
                                 <!-- Second row of projects -->
                                 <td class="project-item">
                                   <a href="#project-link">
-                                    <img src="project-icon.png" alt="">
+                                    <picture>
+                                      <source media="(max-width: 767px)" srcset="project-icon-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="project-icon.jpg">
+                                      <img src="project-icon.jpg" alt="This is a preview image of my project.">
+                                      <!-- image courtesy of https://www.istockphoto.com/ -->
+                                    </picture>
                                     <div class="project-info">
                                     <h3><font size="5"> Project 4 </font></h3>
                                     <p><font size="3">This is a description of the project. More information about each of these projects will be written here later.</font></p>
@@ -139,7 +193,12 @@
                                 </td>
                                 <td class="project-item">
                                   <a href="#project-link">
-                                    <img src="project-icon.png" alt="">
+                                    <picture>
+                                      <source media="(max-width: 767px)" srcset="project-icon-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="project-icon.jpg">
+                                      <img src="project-icon.jpg" alt="This is a preview image of my project.">
+                                      <!-- image courtesy of https://www.istockphoto.com/ -->
+                                    </picture>
                                     <div class="project-info">
                                     <h3><font size="5"> Project 5 </font></h3>
                                     <p><font size="3">This is a description of the project. More information about each of these projects will be written here later.</font></p>
@@ -148,7 +207,12 @@
                                 </td>
                                 <td class="project-item">
                                   <a href="#project-link">
-                                    <img src="project-icon.png" alt="">
+                                    <picture>
+                                      <source media="(max-width: 767px)" srcset="project-icon-optimized.jpg">
+                                      <source media="(min-width: 768px)" srcset="project-icon.jpg">
+                                      <img src="project-icon.jpg" alt="This is a preview image of my project.">
+                                      <!-- image courtesy of https://www.istockphoto.com/ -->
+                                    </picture>
                                     <div class="project-info">
                                     <h3><font size="5"> Project 6 </font></h3>
                                     <p><font size="3">This is a description of the project. More information about each of these projects will be written here later.</font></p>

@@ -2,7 +2,7 @@
   font-family: Rubik;
   src: url(Rubik[wght].ttf),
        url(Rubik-Italic[wght].ttf);
-  /* You can add other font formats here */
+       /* font from https://github.com/googlefonts/rubik */
 }
 
 /* reset */
@@ -16,10 +16,11 @@
   --highlight-color: #ff9900;
 }
 
-
+/* font setup */
 h1, h2, h3, p, td {
   font-family: Rubik;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -27,52 +28,52 @@ h1, h2, h3, p, td {
     max-width: 100%;
 }
 
-
+/* header */
 nav {
   background-color: #fff;
   margin: 30px;
   color: #2D2D33;
-}
 
-nav table {
-  background-color: #fff;
-  margin: 0px;
-  border: none; /* To remove the border */
-  width: 100%; /* To set width to 100% */
-  border-spacing: 0; /* Equivalent to cellspacing="0" */
-  border-collapse: collapse; /* Helps to merge cell borders */
-}
+  & table {
+    background-color: #fff;
+    margin: 0px;
+    border: none;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
 
-nav ul {
-  list-style: none;
-  text-align: center;
-}
+  & ul {
+    list-style: none;
+    text-align: center;
+  }
 
-nav a {
-    font-weight: bold;
-    text-decoration: none; /* Remove the underline */
+  & a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #2D2D33;
+
+      &:hover {
+        color: #485A78;
+      }
+  }
+  & span {
     color: #2D2D33;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 10%;
+    font-size: 22px;
+
+    &:hover {
+      transform: scale(1.2) rotate(20deg);
+    }
+  }
 }
 
-nav a:hover {
-  color: #485A78;
-}
-
-nav span {
-  color: #2D2D33;
-  transition: transform 0.3s ease; /* Smooth transition effect */
-  display: inline-block; /* Allows the element to have width and height properties */
-  margin-left: 10%;
-  font-size: 22px;
-}
-
-span:hover {
-  transform: scale(1.2) rotate(20deg); /* Scales to 120% and rotates 20 degrees on hover */
-}
-
+/* media queries for header */
 @media (max-width: 1000px) {
     nav span {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 18px;
         display: inline-block;
     }
     nav a {
@@ -82,7 +83,7 @@ span:hover {
 
 @media (max-width: 767px) {
     nav span {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 18px;
         display: inline-block;
     }
     nav a {
@@ -92,7 +93,7 @@ span:hover {
 
 @media (max-width: 600px) {
     nav span {
-        font-size: 17px; /* Adjust font size for smaller screens */
+        font-size: 17px;
     }
     nav a {
       font-size: 15px;
@@ -112,42 +113,42 @@ span:hover {
 #about {
   background-color: #2D2D33;
   color: #fff;
+
+  & img {
+      display: block;
+      max-width: 90%;
+      width: 600px;
+  }
+
+  & table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+
+  & #bio {
+    padding-top: 5%;
+
+    max-width: 600px;
+  }
+
+  & #learn-more {
+    padding-top: 5%;
+    padding-bottom: 10px;
+  }
+
+  & .bio-name * {
+    padding-bottom: 5px;
+  }
+
+  & #bio-content {
+    padding-bottom: 5%;
+  }
 }
 
-#about img {
-    display: block;
-    max-width: 90%;
-    width: 600px;
-}
-
-#about table {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10%;
-}
-
-#bio {
-  padding-top: 5%;
-
-  max-width: 600px; /* Set a maximum width for the bio content */
-}
-
-#learn-more {
-  padding-top: 5%;
-  padding-bottom: 10px;
-}
-
-.bio-name * {
-  padding-bottom: 5px;
-}
-
-#bio-content {
-  padding-bottom: 5%;
-}
-
-/* Responsive adjustment for smaller screens */
-@media only screen and (max-width: 630px) {
+/* media queries for about section */
+@media only screen and (max-width: 640px) {
     #about table {
         display: block;
     }
@@ -163,7 +164,7 @@ span:hover {
     }
 
     #about img {
-        width: 70%; /* Allow the image to take full width on smaller screens */
+        width: 70%;
         margin-left: 15%;
     }
     #bio-content {
@@ -192,13 +193,12 @@ span:hover {
     }
 
     #about img {
-        width: 70%; /* Allow the image to take full width on smaller screens */
+        width: 70%;
         margin-left: 15%;
     }
     #about .rounded-button {
-          /* Adjust button size for smaller screens */
-          padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
-          font-size: 0.85rem; /* Reduce font size */
+          padding: 0.72rem 0.95rem;
+          font-size: 0.85rem;
     }
     .about-button {
       padding-bottom: 3%;
@@ -210,64 +210,66 @@ span:hover {
     margin-right: 12%;
   }
   #about .rounded-button {
-        /* Adjust button size for smaller screens */
-        padding: 0.67rem 0.90rem; /* Modify padding to reduce button size */
-        font-size: 0.80rem; /* Reduce font size */
+        padding: 0.67rem 0.90rem;
+        font-size: 0.80rem;
   }
 }
 
+/* skills section */
 #skills {
     color: #2D2D33;
+    background-color: color-mix(display-p3 #B1C9F0 90%, display-p3 #E1F9FF 90%);
+
+    & h1 {
+         text-align: center;
+         padding-top: 50%;
+         padding: 20px;
+         margin-top: 50px;
+         margin-bottom: 4%;
+    }
+
+    & table {
+        max-width: 100%;
+        margin: 0 auto;
+        border-spacing: 70px 15px;
+        width: 75%;
+        display: flex;
+        margin-bottom: 5%;
+    }
+
+    & td {
+      width: 33.33%;
+      box-sizing: border-box;
+      text-align: center;
+      padding-bottom: 100px;
+      vertical-align: top;
+    }
+
+    & tr {
+      margin-bottom: 110%;
+    }
+
+
+    & img {
+        max-width: 100%;
+        width: 120px;
+        height: auto;
+    }
 }
 
-#skills h1 {
-     text-align: center;
-     padding-top: 50%;
-     padding: 20px;
-     margin-top: 50px;
-     margin-bottom: 4%;
-}
-
-#skills table {
-    max-width: 100%;
-    margin: 0 auto; /* This centers the table */
-    border-spacing: 70px 15px;
-    width: 75%;
-    display: flex;
-    margin-bottom: 5%;
-}
-
-#skills td {
-  width: 33.33%; /* Initially show in three columns */
-  box-sizing: border-box; /* Ensures padding is included in the width */
-  text-align: center;
-  padding-bottom: 100px;
-  vertical-align: top;
-}
-
-#skills tr {
-  margin-bottom: 110%;
-}
-
-
-#skills img {
-    max-width: 100%;
-    width: 120px;
-    height: auto;
-}
-
+/* media queries for skills section */
 @media only screen and (max-width: 1270px){
   #skills table {
     width: 95%;
   }
   #skills table tr {
     display: block;
-    margin-bottom: 10px; /* Add space between rows */
+    margin-bottom: 10px;
   }
   #skills table th,
   #skills table td {
-    width: 50%; /* Set each cell to occupy 50% of the table width */
-    float: left; /* Arrange cells in two columns */
+    width: 50%;
+    float: left;
     padding: 30px;
   }
 }
@@ -280,12 +282,12 @@ span:hover {
 
 @media only screen and (max-width: 865px){
     #skills table {
-        display: flex; /* Changes table to block display */
+        display: flex;
         justify-content: center;
     }
     #skills table th, #skills table td {
-        display: block; /* Changes cells to block display */
-        width: 100%; /* Full width for cells */
+        display: block;
+        width: 100%;
         padding-bottom: 90px;
     }
     #skills p {
@@ -295,99 +297,58 @@ span:hover {
     }
 }
 
-footer {
-    background-color: #2C3347;
-    color: #fff;
-    text-align: center;
-}
-
-.rounded-button {
-  background-color: #FFFFFF;
-  border: 0;
-  border-radius: .5rem;
-  box-sizing: border-box;
-  color: #111827;
-  font-family: Rubik;
-  font-size: .875rem;
-  font-weight: 600;
-  line-height: 1.25rem;
-  padding: .75rem 1rem;
-  text-align: center;
-  text-decoration: none #D1D5DB solid;
-  text-decoration-thickness: auto;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-/* Hover effect - Change color on hover */
-.rounded-button:hover {
-    background-color: #C9D0E3;
-}
-
-.rounded-button:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.rounded-button:focus-visible {
-  box-shadow: none;
-}
-
 #projects {
   background-color: #CED1D9;
-}
 
-#projects h1 {
-  text-align: center;
-  padding-top: 50%;
-  padding: 20px;
-  margin-top: 50px;
-  margin-bottom: 60px;
-}
+  & h1 {
+    text-align: center;
+    padding-top: 50%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
 
-#projects aside {
-  text-align: center;
-  padding-top: 50%;
-  padding: 20px;
-  margin-top: 5%;
-  margin-bottom: 100px;
-}
+  & aside {
+    text-align: center;
+    padding-top: 50%;
+    padding: 20px;
+    margin-top: 5%;
+    margin-bottom: 100px;
+  }
 
-#projects table {
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+  & table {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-#projects td {
-  width: 33.33%;
-  box-sizing: border-box;
-  text-align: center;
-  vertical-align: top;
+  & td {
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: top;
+  }
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Horizontally center items */
-  margin: 0; /* Center the entire gallery */
+  justify-content: center;
+  margin: 0;
 }
 
 .project-item {
   max-width: 100%;
   position: relative;
   overflow: hidden;
-  width: 228px; /* Set width to match the image */
+  width: 228px;
   height: 206px;
 }
 
 .project-item img {
   width: 100%;
-  height: 100%; /* Make the images occupy the full height of their container */
+  height: 100%;
   object-fit: cover;
 }
 
@@ -395,8 +356,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Make sure it covers the whole width */
-  height: 100%; /* Ensure it covers the whole height */
+  width: 100%;
+  height: 100%;
   padding-top: 20px;
   background: rgba(255, 255, 255, 0.8);
   opacity: 0;
@@ -431,11 +392,12 @@ footer {
 
 @media (min-width: 1001px){
     .project-item {
-      width: 228px; /* Set width to match the image */
-      height: 206px; /* Allow height to adjust based on the width */
+      width: 228px;
+      height: 206px;
     }
 }
 
+/* contact section */
 #contact {
   background-color: #2D2D33;
   display: flex;
@@ -513,10 +475,6 @@ input, textarea {
   font-size:0.8rem;
 }
 
-input:focus, textarea:focus{
-  outline:1px solid $teal;
-}
-
 #contact-info {
   display: none;
 }
@@ -544,9 +502,8 @@ input:focus, textarea:focus{
     line-height: 30px;
   }
   #contact .rounded-button {
-        /* Adjust button size for smaller screens */
-        padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
-        font-size: 0.85rem; /* Reduce font size */
+        padding: 0.72rem 0.95rem;
+        font-size: 0.85rem;
         background-color: #2D2D33;
         color: white;
         margin-bottom: 10px;
@@ -569,6 +526,12 @@ form p {
   text-align:left;
 }
 
+/* footer */
+footer {
+    background-color: #2C3347;
+    color: #fff;
+    text-align: center;
+}
 
 @keyframes changeColor {
   0% { color: var(--main-color); }
@@ -582,9 +545,43 @@ form p {
   100% { color: green; }
 }
 
-/* Apply the animation to the h1 element */
 .color-change {
-    animation: changeColor 5s infinite; /* 5s duration, runs infinitely */
+    animation: changeColor 5s infinite;
+}
+
+/* button styling */
+.rounded-button {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: Rubik;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.rounded-button:hover {
+    background-color: color(display-p3 0.788 0.816 0.890);
+}
+
+.rounded-button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.rounded-button:focus-visible {
+  box-shadow: none;
 }
 
 /* Fallback for browsers not supporting CSS variables */
@@ -594,7 +591,7 @@ form p {
   }
 }
 
-#contact a[href^="tel"] {
-  text-decoration: none; /* Remove underline */
-  color: black; /* Set the color to inherit from its parent */
+a:has([href^="tel"]) {
+  text-decoration: none;
+  color: black;
 }

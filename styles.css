@@ -549,6 +549,7 @@ input:focus, textarea:focus{
         font-size: 0.85rem; /* Reduce font size */
         background-color: #2D2D33;
         color: white;
+        margin-bottom: 10px;
   }
 }
 

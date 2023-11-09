@@ -450,7 +450,6 @@ footer {
 
 
 .contact-container {
-	background-color: $white;
 	border-radius: 5px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
 			0 10px 10px rgba(0,0,0,0.22);
@@ -470,16 +469,10 @@ h2 {
   display:flex;
 }
 
-.left-container {
-  flex:1;
-  height:480px;
-  background-color:$teal;
-}
 .right-container {
   display:flex;
   flex:1;
   height:460px;
-  background-color: $white;
   justify-content:center;
   align-items:center;
 }
@@ -490,7 +483,6 @@ h2 {
   height:480px;
   justify-content:center;
   align-items:center;
-  color:$white;
   background-color: white;
 }
 
@@ -530,6 +522,13 @@ input:focus, textarea:focus{
 }
 
 @media only screen and (max-width: 824px) {
+  .right-inner-container {
+    color:black;
+  }
+  input, textarea {
+  	background-color: #D1E1FB;
+    color: black;
+  }
   .left-container{
     display: none;
   }
@@ -538,6 +537,7 @@ input:focus, textarea:focus{
   }
   .right-container {
     padding-bottom: 40px;
+    background-color: white;
   }
   #contact-info {
     display: contents;
@@ -547,9 +547,14 @@ input:focus, textarea:focus{
         /* Adjust button size for smaller screens */
         padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
         font-size: 0.85rem; /* Reduce font size */
+        background-color: #2D2D33;
+        color: white;
   }
+}
+
+@media only screen and (max-width: 500px) {
   .sm-view {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 

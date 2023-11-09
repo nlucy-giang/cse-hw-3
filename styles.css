@@ -124,10 +124,11 @@ span:hover {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 10%;
 }
 
 /* Responsive adjustment for smaller screens */
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 630px) {
     #about table {
         display: block;
     }
@@ -138,13 +139,16 @@ span:hover {
     }
 
     #bio {
-      margin-left: 30px;
+      margin-left: 3%;
       max-width: 95%;
     }
 
     #about img {
         width: 70%; /* Allow the image to take full width on smaller screens */
         margin-left: 15%;
+    }
+    #bio-content {
+      margin-right: 6%;
     }
 }
 
@@ -162,17 +166,16 @@ span:hover {
     }
 
     #bio {
-      margin-left:10px;
-      max-width: 90%
+      margin-left:3%;
+      max-width: 90%;
+      padding-left: 4%;
+      padding-right: 20%;
     }
 
     #about img {
         width: 70%; /* Allow the image to take full width on smaller screens */
         margin-left: 15%;
     }
-}
-
-@media only screen and (max-width: 467px) {
     #about .rounded-button {
           /* Adjust button size for smaller screens */
           padding: 0.72rem 0.95rem; /* Modify padding to reduce button size */
@@ -181,13 +184,14 @@ span:hover {
 }
 
 #bio {
-  padding-top: 120px;
-  padding-right: 100px;
+  padding-top: 5%;
+
   max-width: 600px; /* Set a maximum width for the bio content */
 }
 
 #learn-more {
-  padding-bottom: 20px;
+  padding-top: 5%;
+  padding-bottom: 10px;
 }
 
 .bio-name * {
@@ -195,8 +199,7 @@ span:hover {
 }
 
 #bio-content {
-  padding-top: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 5%;
 }
 
 #skills {
@@ -208,7 +211,7 @@ span:hover {
      padding-top: 50%;
      padding: 20px;
      margin-top: 50px;
-     margin-bottom: 60px;
+     margin-bottom: 4%;
 }
 
 #skills table {
@@ -217,13 +220,14 @@ span:hover {
     border-spacing: 70px 15px;
     width: 75%;
     display: flex;
+    margin-bottom: 5%;
 }
 
 #skills td {
   width: 33.33%; /* Initially show in three columns */
   box-sizing: border-box; /* Ensures padding is included in the width */
   text-align: center;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   vertical-align: top;
 }
 
@@ -239,6 +243,9 @@ span:hover {
 }
 
 @media only screen and (max-width: 1270px){
+  #skills table {
+    width: 95%;
+  }
   #skills table tr {
     display: block;
     margin-bottom: 10px; /* Add space between rows */
@@ -247,11 +254,17 @@ span:hover {
   #skills table td {
     width: 50%; /* Set each cell to occupy 50% of the table width */
     float: left; /* Arrange cells in two columns */
-    padding: 40px;
+    padding: 30px;
   }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 910px){
+  #skills table {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 865px){
     #skills table {
         display: flex; /* Changes table to block display */
         justify-content: center;
@@ -259,7 +272,12 @@ span:hover {
     #skills table th, #skills table td {
         display: block; /* Changes cells to block display */
         width: 100%; /* Full width for cells */
-        padding-bottom: 100px;
+        padding-bottom: 90px;
+    }
+    #skills p {
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 2%;
     }
 }
 
@@ -320,7 +338,7 @@ footer {
   text-align: center;
   padding-top: 50%;
   padding: 20px;
-  margin-top: 7%;
+  margin-top: 5%;
   margin-bottom: 100px;
 }
 

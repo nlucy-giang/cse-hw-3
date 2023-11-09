@@ -11,6 +11,11 @@
   padding: 0;
 }
 
+:root {
+  --main-color: #3498db;
+  --highlight-color: #ff9900;
+}
+
 
 h1, h2, h3, p, td {
   font-family: Rubik;
@@ -18,17 +23,20 @@ h1, h2, h3, p, td {
 .container {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 
 nav {
   background-color: #fff;
   margin: 30px;
+  color: #2D2D33;
 }
 
 nav table {
   background-color: #fff;
-  margin: 30px;
+  margin: 0px;
   border: none; /* To remove the border */
   width: 100%; /* To set width to 100% */
   border-spacing: 0; /* Equivalent to cellspacing="0" */
@@ -38,11 +46,6 @@ nav table {
 nav ul {
   list-style: none;
   text-align: center;
-}
-
-nav span {
-  margin-left: 40%;
-  font-size: 24px;
 }
 
 nav a {
@@ -59,54 +62,51 @@ nav span {
   color: #2D2D33;
   transition: transform 0.3s ease; /* Smooth transition effect */
   display: inline-block; /* Allows the element to have width and height properties */
+  margin-left: 10%;
+  font-size: 22px;
 }
 
 span:hover {
   transform: scale(1.2) rotate(20deg); /* Scales to 120% and rotates 20 degrees on hover */
 }
 
-#logo {
-  display: flex;
-  padding: 10px;
-  margin-left: 50%;
-  width: 25%;
-  height: 25%;
-}
-
-@media (max-width: 1000px) and (orientation: portrait){
+@media (max-width: 1000px) {
     nav span {
         font-size: 18px; /* Adjust font size for smaller screens */
         display: inline-block;
     }
+    nav a {
+      font-size: 18px;
+    }
 }
 
-:root {
-  --main-color: #3498db;
-  --highlight-color: #ff9900;
+@media (max-width: 767px) {
+    nav span {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        display: inline-block;
+    }
+    nav a {
+      font-size: 16px;
+    }
 }
 
-@keyframes changeColor {
-  0% { color: var(--main-color); }
-  50% { color: var(--highlight-color); }
-  100% { color: var(--main-color); }
+@media (max-width: 600px) {
+    nav span {
+        font-size: 17px; /* Adjust font size for smaller screens */
+    }
+    nav a {
+      font-size: 15px;
+    }
 }
 
-@keyframes fallbackColorChange {
-  0% { color: red; }
-  50% { color: blue; }
-  100% { color: green; }
-}
-
-/* Apply the animation to the h1 element */
-.color-change {
-    animation: changeColor 5s infinite; /* 5s duration, runs infinitely */
-}
-
-/* Fallback for browsers not supporting CSS variables */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .my-element {
-    animation: fallbackColorChange 3s infinite; /* Fallback to non-variable animation */
-  }
+@media (max-width: 480px) {
+    nav span {
+        display: none;
+    }
+    nav a {
+      font-size: 16px;
+      padding-right: 25px;
+    }
 }
 
 #about {
@@ -127,7 +127,27 @@ span:hover {
 }
 
 /* Responsive adjustment for smaller screens */
-@media only screen and (max-width: 736px) and (orientation: portrait){
+@media only screen and (max-width: 736px) and (orientation: portrait) {
+    #about table {
+        display: block;
+    }
+
+    #about td {
+        width: 100%;
+        display: block;
+    }
+
+    #bio {
+      margin-left: 30px;
+    }
+
+    #about img {
+        width: 70%; /* Allow the image to take full width on smaller screens */
+        margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 467px) and (orientation: portrait){
     #logo img {
       display: none;
     }
@@ -141,7 +161,7 @@ span:hover {
     }
 
     #bio {
-      margin-left: 30px;
+      margin-left:10px;
     }
 
     #about img {
@@ -208,11 +228,24 @@ span:hover {
     height: auto;
 }
 
-@media (max-width: 1000px){
+@media only screen and (max-width: 1270px){
+  #skills table tr {
+    display: block;
+    margin-bottom: 10px; /* Add space between rows */
+  }
+  #skills table th,
+  #skills table td {
+    width: 50%; /* Set each cell to occupy 50% of the table width */
+    float: left; /* Arrange cells in two columns */
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px){
     #skills table {
-        display: block; /* Changes table to block display */
+        display: flex; /* Changes table to block display */
     }
-    #skills td {
+    #skills table th, #skills table td {
         display: block; /* Changes cells to block display */
         width: 100%; /* Full width for cells */
         padding-bottom: 100px;
@@ -225,7 +258,6 @@ footer {
     text-align: center;
 }
 
-/* CSS */
 .rounded-button {
   background-color: #FFFFFF;
   border: 0;
@@ -265,7 +297,6 @@ footer {
   background-color: #CED1D9;
 }
 
-
 #projects h1 {
   text-align: center;
   padding-top: 50%;
@@ -296,73 +327,69 @@ footer {
   vertical-align: top;
 }
 
-#projects img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Horizontally center items */
-  margin: 0 auto; /* Center the entire gallery */
-  max-width: 1200px; /* Set your desired max-width */
-}
-
-.gallery .project-item {
-  min-height: 200px; /* Set a standard height */
-  position: relative;
-}
-
-.gallery .project-item img {
-  width: 100%;
-  height: 100%; /* Make the images occupy the full height of their container */
-  object-fit: cover;
+  margin: 0; /* Center the entire gallery */
 }
 
 .project-item {
+  max-width: 100%;
   position: relative;
+  overflow: hidden;
+  width: 228px; /* Set width to match the image */
+  height: 206px;
 }
 
-.project-item .project-info {
-  position: absolute;
-  top: 0;
-  left: 0;
+.project-item img {
   width: 100%;
-  height: 100%; /* Match the height with the images */
-  padding: 20px; /* Adjust padding as per your needs */
-  background: rgba(255, 255, 255, 0.8);
-  opacity: 0;
-  transition: opacity 0.5s;
-  box-sizing: border-box; /* Include padding in the overall height */
-}
-
-.project-item:hover .project-info {
-  opacity: 1;
+  height: 100%; /* Make the images occupy the full height of their container */
+  object-fit: cover;
 }
 
 .project-info {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
+  width: 100%; /* Make sure it covers the whole width */
+  height: 100%; /* Ensure it covers the whole height */
+  padding-top: 20px;
   background: rgba(255, 255, 255, 0.8);
   opacity: 0;
   transition: opacity 0.5s;
 }
 
-@media (max-width: 1000px) and (orientation: portrait) {
+.project-item:hover .project-info {
+  opacity: 1;
+}
+
+.project-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (hover: none) {
+  .project-item a:focus .project-info {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px){
     #projects td {
         display: block;
         width: 100%;
-        padding-bottom: 100px;
+        margin-bottom: 50px;
     }
-
     #projects aside {
       margin-top: 1px;
+    }
+}
+
+@media (min-width: 1001px){
+    .project-item {
+      width: 228px; /* Set width to match the image */
+      height: 206px; /* Allow height to adjust based on the width */
     }
 }
 
@@ -459,7 +486,7 @@ input:focus, textarea:focus{
   display: none;
 }
 
-@media only screen and (max-width: 825px) {
+@media only screen and (max-width: 824px) {
   .left-container{
     display: none;
   }
@@ -483,4 +510,34 @@ input:focus, textarea:focus{
 
 form p {
   text-align:left;
+}
+
+
+@keyframes changeColor {
+  0% { color: var(--main-color); }
+  50% { color: var(--highlight-color); }
+  100% { color: var(--main-color); }
+}
+
+@keyframes fallbackColorChange {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: green; }
+}
+
+/* Apply the animation to the h1 element */
+.color-change {
+    animation: changeColor 5s infinite; /* 5s duration, runs infinitely */
+}
+
+/* Fallback for browsers not supporting CSS variables */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .my-element {
+    animation: fallbackColorChange 3s infinite; /* Fallback to non-variable animation */
+  }
+}
+
+a[href^="tel"] {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set the color to inherit from its parent */
 }

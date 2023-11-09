@@ -206,6 +206,11 @@ span:hover {
   #bio-content {
     margin-right: 12%;
   }
+  #about .rounded-button {
+        /* Adjust button size for smaller screens */
+        padding: 0.67rem 0.90rem; /* Modify padding to reduce button size */
+        font-size: 0.80rem; /* Reduce font size */
+  }
 }
 
 #skills {
